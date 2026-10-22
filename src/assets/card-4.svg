@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Tarjeta 4: Responsive">
+  <defs>
+    <linearGradient id="card4-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#card4-gradient)" />
+  <text
+    x="400"
+    y="300"
+    font-family="system-ui, sans-serif"
+    font-size="200"
+    font-weight="800"
+    fill="#ffffff"
+    text-anchor="middle"
+    dominant-baseline="central"
+    opacity="0.95"
+  >04</text>
+  <text
+    x="400"
+    y="460"
+    font-family="system-ui, sans-serif"
+    font-size="56"
+    font-weight="600"
+    fill="#ffffff"
+    text-anchor="middle"
+    dominant-baseline="central"
+    opacity="0.85"
+  >Responsive</text>
+</svg>
