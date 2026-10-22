@@ -21,7 +21,7 @@ export default [
     },
   },
   {
-    files: ['src/**/*.js', 'tests/**/*.js'],
+    files: ['src/**/*.js', 'tests/**/*.js', 'scripts/**/*.js'],
     languageOptions: {
       globals: {
         ...globals.browser,
