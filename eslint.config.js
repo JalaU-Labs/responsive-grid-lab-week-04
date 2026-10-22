@@ -1,6 +1,10 @@
 import js from '@eslint/js'
+import globals from 'globals'
 
 export default [
+  {
+    ignores: ['dist/**', 'node_modules/**', 'playwright-report/**', 'test-results/**', 'docs/**'],
+  },
   js.configs.recommended,
   {
     files: ['src/**/*.js', 'tests/**/*.js'],
@@ -8,8 +12,8 @@ export default [
       ecmaVersion: 'latest',
       sourceType: 'module',
       globals: {
-        browser: true,
-        node: true,
+        ...globals.browser,
+        ...globals.node,
       },
     },
     rules: {
