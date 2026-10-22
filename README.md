@@ -7,6 +7,11 @@ Laboratorio individual de la Semana 4 — Desarrollo de Software 4.
 Página web responsiva construida con CSS Grid que presenta 4 contenedores
 (imagen + bloque de texto) y se adapta a escritorio, tableta y móvil.
 
+## Despliegue
+
+- GitHub Pages: https://jalau-labs.github.io/responsive-grid-lab-week-04/
+- GitLab Pages: https://responsive-grid-lab-week-04-647b30.gitlab.io/
+
 ## Tecnologías
 
 - HTML5
@@ -32,8 +37,11 @@ Página web responsiva construida con CSS Grid que presenta 4 contenedores
 
 ```
 responsive-grid-lab-week-04/
-├── src/                  # Código fuente (HTML, CSS, JS)
-├── assets/               # Imágenes y recursos estáticos
+├── src/
+│   ├── assets/           # Ilustraciones SVG de las tarjetas
+│   ├── index.html        # Markup semántico de la maqueta
+│   ├── main.js           # Punto de entrada JavaScript
+│   └── styles.css        # CSS Grid y estilos base
 ├── tests/                # Pruebas automatizadas (Playwright)
 ├── docs/                 # Capturas y documentación de entrega
 ├── .github/workflows/    # GitHub Actions
@@ -44,17 +52,17 @@ responsive-grid-lab-week-04/
 
 ## Scripts disponibles
 
-| Comando              | Descripción                                      |
-| -------------------- | ------------------------------------------------ |
-| `make install`       | Instala dependencias con pnpm                    |
-| `make dev`           | Inicia el servidor de desarrollo Vite            |
-| `make build`         | Genera el bundle de producción en `dist/`        |
-| `make preview`       | Previsualiza el bundle de producción localmente  |
-| `make lint`          | Ejecuta ESLint                                   |
-| `make format`        | Formatea con Prettier                            |
-| `make format-check`  | Verifica el formato sin modificar archivos       |
-| `make test`          | Ejecuta las pruebas de Playwright                |
-| `make clean`         | Elimina artefactos de build y reportes           |
+| Comando             | Descripción                                     |
+| ------------------- | ----------------------------------------------- |
+| `make install`      | Instala dependencias con pnpm                   |
+| `make dev`          | Inicia el servidor de desarrollo Vite           |
+| `make build`        | Genera el bundle de producción en `dist/`       |
+| `make preview`      | Previsualiza el bundle de producción localmente |
+| `make lint`         | Ejecuta ESLint                                  |
+| `make format`       | Formatea con Prettier                           |
+| `make format-check` | Verifica el formato sin modificar archivos      |
+| `make test`         | Ejecuta las pruebas de Playwright               |
+| `make clean`        | Elimina artefactos de build y reportes          |
 
 ## Repositorios
 
