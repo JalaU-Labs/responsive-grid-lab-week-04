@@ -12,6 +12,15 @@ Página web responsiva construida con CSS Grid que presenta 4 contenedores
 - GitHub Pages: https://jalau-labs.github.io/responsive-grid-lab-week-04/
 - GitLab Pages: https://responsive-grid-lab-week-04-647b30.gitlab.io/
 
+## Capturas
+
+| Escritorio (1280x720)              | Tableta (768x1024)              | Móvil (375x667)              |
+| ---------------------------------- | ------------------------------- | ---------------------------- |
+| ![Escritorio](docs/desktop.png)    | ![Tableta](docs/tablet.png)     | ![Móvil](docs/mobile.png)    |
+
+Las capturas se regeneran con `make screenshots`, que compila el bundle de producción,
+lo sirve con `vite preview` y usa Playwright para tomar las tres imágenes.
+
 ## Tecnologías
 
 - HTML5
@@ -43,6 +52,7 @@ responsive-grid-lab-week-04/
 │   ├── main.js           # Punto de entrada JavaScript
 │   └── styles.css        # CSS Grid y estilos base
 ├── tests/                # Pruebas automatizadas (Playwright)
+├── scripts/              # Utilidades (captura de screenshots)
 ├── docs/                 # Capturas y documentación de entrega
 ├── .github/workflows/    # GitHub Actions
 ├── .gitlab-ci.yml        # GitLab CI/CD
@@ -52,17 +62,18 @@ responsive-grid-lab-week-04/
 
 ## Scripts disponibles
 
-| Comando             | Descripción                                     |
-| ------------------- | ----------------------------------------------- |
-| `make install`      | Instala dependencias con pnpm                   |
-| `make dev`          | Inicia el servidor de desarrollo Vite           |
-| `make build`        | Genera el bundle de producción en `dist/`       |
-| `make preview`      | Previsualiza el bundle de producción localmente |
-| `make lint`         | Ejecuta ESLint                                  |
-| `make format`       | Formatea con Prettier                           |
-| `make format-check` | Verifica el formato sin modificar archivos      |
-| `make test`         | Ejecuta las pruebas de Playwright               |
-| `make clean`        | Elimina artefactos de build y reportes          |
+| Comando             | Descripción                                       |
+| ------------------- | ------------------------------------------------- |
+| `make install`      | Instala dependencias con pnpm                     |
+| `make dev`          | Inicia el servidor de desarrollo Vite             |
+| `make build`        | Genera el bundle de producción en `dist/`         |
+| `make preview`      | Previsualiza el bundle de producción localmente   |
+| `make lint`         | Ejecuta ESLint                                    |
+| `make format`       | Formatea con Prettier                             |
+| `make format-check` | Verifica el formato sin modificar archivos        |
+| `make test`         | Ejecuta las pruebas de Playwright                 |
+| `make screenshots`  | Compila, sirve con preview y captura `docs/*.png` |
+| `make clean`        | Elimina artefactos de build y reportes            |
 
 ## Repositorios
 
