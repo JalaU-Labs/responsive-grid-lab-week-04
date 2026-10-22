@@ -10,10 +10,11 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint .",
-    "format": "prettier --write \"src/**/*.{html,css,js}\" \"tests/**/*.js\"",
-    "format:check": "prettier --check \"src/**/*.{html,css,js}\" \"tests/**/*.js\"",
+    "format": "prettier --write \"src/**/*.{html,css,js}\" \"tests/**/*.js\" \"scripts/**/*.js\"",
+    "format:check": "prettier --check \"src/**/*.{html,css,js}\" \"tests/**/*.js\" \"scripts/**/*.js\"",
     "test": "playwright test",
-    "test:report": "playwright show-report"
+    "test:report": "playwright show-report",
+    "screenshots": "node scripts/capture-screenshots.js"
   },
   "devDependencies": {
     "@eslint/js": "^9.0.0",
