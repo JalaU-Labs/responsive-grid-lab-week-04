@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+  root: 'src',
   base: process.env.VITE_BASE || '/',
   build: {
-    outDir: 'dist',
+    outDir: '../dist',
     emptyOutDir: true,
   },
   server: {
