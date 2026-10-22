@@ -19,17 +19,31 @@ Página web responsiva construida con CSS Grid que presenta 4 contenedores
 
 ```
 responsive-grid-lab-week-04/
-├── src/            # Código fuente (HTML, CSS, JS)
-├── assets/         # Imágenes y recursos estáticos
-├── tests/          # Pruebas automatizadas (Playwright)
-├── docs/           # Capturas y documentación de entrega
-├── .github/        # GitHub Actions
-├── .gitlab-ci.yml  # GitLab CI/CD
-├── Makefile        # Automatización de tareas
-└── package.json    # Dependencias y scripts
+├── src/                  # Código fuente (HTML, CSS, JS)
+├── assets/               # Imágenes y recursos estáticos
+├── tests/                # Pruebas automatizadas (Playwright)
+├── docs/                 # Capturas y documentación de entrega
+├── .github/workflows/    # GitHub Actions
+├── .gitlab-ci.yml        # GitLab CI/CD
+├── Makefile              # Automatización de tareas
+└── package.json          # Dependencias y scripts
 ```
+
+## Scripts disponibles
+
+| Comando              | Descripción                                      |
+| -------------------- | ------------------------------------------------ |
+| `make install`       | Instala dependencias con pnpm                    |
+| `make dev`           | Inicia el servidor de desarrollo Vite            |
+| `make build`         | Genera el bundle de producción en `dist/`        |
+| `make preview`       | Previsualiza el bundle de producción localmente  |
+| `make lint`          | Ejecuta ESLint                                   |
+| `make format`        | Formatea con Prettier                            |
+| `make format-check`  | Verifica el formato sin modificar archivos       |
+| `make test`          | Ejecuta las pruebas de Playwright                |
+| `make clean`         | Elimina artefactos de build y reportes           |
 
 ## Repositorios
 
-- [GitLab](https://gitlab.com/jala-university1/cohort-5/ES.CSSD-245.GA.T2.26.M2/SD/group-b/individual-laboratories/alejandro-botina/week-04/responsive-grid-lab-week-04.git) (principal)
-- [GitHub](https://github.com/JalaU-Labs/responsive-grid-lab-week-04.git) (espejo)
+- [GitLab](https://gitlab.com/jala-university1/cohort-5/ES.CSSD-245.GA.T2.26.M2/SD/group-b/individual-laboratories/alejandro-botina/week-04/responsive-grid-lab-week-04) (principal)
+- [GitHub](https://github.com/JalaU-Labs/responsive-grid-lab-week-04) (espejo)
