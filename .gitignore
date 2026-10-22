@@ -1,0 +1,33 @@
+# Dependencias
+node_modules/
+.pnpm-store/
+
+# Build y artefactos
+dist/
+.vite/
+*.local
+
+# Pruebas y reportes
+test-results/
+playwright-report/
+coverage/
+*.lcov
+
+# Entornos y secretos
+.env
+.env.*
+!.env.example
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
