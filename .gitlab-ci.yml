@@ -1,0 +1,54 @@
+stages:
+  - quality
+  - test
+  - deploy
+
+default:
+  image: node:22-alpine
+  cache:
+    key:
+      files:
+        - pnpm-lock.yaml
+    paths:
+      - node_modules/
+      - .pnpm-store/
+
+before_script:
+  - corepack enable
+  - corepack prepare pnpm@12 --activate
+  - pnpm config set store-dir .pnpm-store
+
+lint:
+  stage: quality
+  script:
+    - pnpm install --frozen-lockfile
+    - pnpm lint
+    - pnpm format:check
+
+playwright:
+  stage: test
+  script:
+    - pnpm install --frozen-lockfile
+    - pnpm exec playwright install --with-deps chromium
+    - pnpm test
+  artifacts:
+    when: always
+    paths:
+      - playwright-report/
+    expire_in: 7 days
+
+pages:
+  stage: deploy
+  dependencies:
+    - playwright
+  script:
+    - pnpm install --frozen-lockfile
+    - export VITE_BASE="${CI_PAGES_URL:-/$CI_PROJECT_PATH/}"
+    - pnpm build
+    - rm -rf public
+    - mv dist public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
