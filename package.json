@@ -1,0 +1,24 @@
+{
+  "name": "responsive-grid-lab-week-04",
+  "version": "1.0.0",
+  "description": "Laboratorio individual Semana 4: diseno adaptable con CSS Grid y contenedores de texto/imagenes",
+  "type": "module",
+  "license": "MIT",
+  "author": "Diego Alejandro Botina",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .js,.html",
+    "format": "prettier --write \"src/**/*.{html,css,js}\" \"tests/**/*.js\"",
+    "format:check": "prettier --check \"src/**/*.{html,css,js}\" \"tests/**/*.js\"",
+    "test": "playwright test",
+    "test:report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.5.0",
+    "vite": "^7.0.0"
+  }
+}
