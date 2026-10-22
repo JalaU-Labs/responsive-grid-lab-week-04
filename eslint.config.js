@@ -7,18 +7,25 @@ export default [
   },
   js.configs.recommended,
   {
-    files: ['src/**/*.js', 'tests/**/*.js'],
+    files: ['**/*.js'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
       globals: {
-        ...globals.browser,
         ...globals.node,
       },
     },
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'off',
+    },
+  },
+  {
+    files: ['src/**/*.js'],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+      },
     },
   },
 ]
