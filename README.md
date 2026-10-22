@@ -15,6 +15,19 @@ Página web responsiva construida con CSS Grid que presenta 4 contenedores
 - Vite (build y servidor de desarrollo)
 - Playwright (pruebas de maquetación automatizadas)
 
+## Requisitos
+
+- Node.js 22 o superior
+- pnpm 12 o superior
+- Una sola vez por máquina, para poder ejecutar las pruebas de Playwright:
+
+  ```
+  pnpm install
+  pnpm exec playwright install chromium
+  ```
+
+  En CI, los pipelines ya ejecutan `playwright install --with-deps chromium`.
+
 ## Estructura del proyecto
 
 ```
