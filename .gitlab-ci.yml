@@ -4,7 +4,7 @@ stages:
   - deploy
 
 default:
-  image: node:22-alpine
+  image: node:22-bookworm
   cache:
     key:
       files:
@@ -39,11 +39,9 @@ playwright:
 
 pages:
   stage: deploy
-  dependencies:
-    - playwright
   script:
     - pnpm install --frozen-lockfile
-    - export VITE_BASE="${CI_PAGES_URL:-/$CI_PROJECT_PATH/}"
+    - export VITE_BASE=$(node -e "console.log(new URL(process.env.CI_PAGES_URL).pathname)")
     - pnpm build
     - rm -rf public
     - mv dist public
