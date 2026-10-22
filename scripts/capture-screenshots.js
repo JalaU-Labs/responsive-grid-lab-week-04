@@ -28,7 +28,12 @@ async function waitForServer(url, maxAttempts = 30, intervalMs = 1000) {
 async function main() {
   await mkdir(OUTPUT_DIR, { recursive: true })
 
-  const preview = spawn('pnpm', ['preview'], { stdio: 'inherit' })
+  const preview = spawn('pnpm', ['preview'], {
+    stdio: ['ignore', 'inherit', 'inherit'],
+  })
+  preview.on('error', (error) => {
+    console.error('Failed to start preview server:', error)
+  })
   const stopPreview = () => {
     if (!preview.killed) preview.kill('SIGTERM')
   }
